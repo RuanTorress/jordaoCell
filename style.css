@@ -53,22 +53,14 @@ h1 {
   font-family: 'Itars', 'Love', sans-serif;
   font-size: 30px;
   line-height: 1.4;
-  color: transparent; /* Torna o texto transparente */
-  background: linear-gradient(45deg, #05f283, #666666); /* Gradiente de cores */
-  -webkit-background-clip: text; /* Aplica o gradiente ao texto */
-  background-clip: text; /* Para suportar navegadores mais novos */
-  font-style: normal;
+  color: #ffffff;
 }
 
 header p {
   font-family: 'Itars', 'Love', sans-serif;
   font-size: 16px;
   opacity: 1; /* Aumenta a opacidade para 1 (totalmente visível) */
-  color: #05f283; /* Cor mais escura para contraste */
-  color: transparent; /* Torna o texto transparente */
-  background: linear-gradient(45deg, #05f283, #666666); /* Gradiente de cores */
-  -webkit-background-clip: text; /* Aplica o gradiente ao texto */
-  background-clip: text; /* Para suportar navegadores mais novos */
+  color: #ffffff;
 }
 
 
