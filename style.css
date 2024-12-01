@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #05f283;
+  --primary-hover: #666666;
+  
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Adicionando uma imagem de fundo ao body */
+body {
+  height: calc(100vh - 40px);
+  background-color: var(--bg-color);
+  background-image: url(/assets/01.jpg
+
+
+
+  );
+  
+  /* Ajusta a imagem para cobrir a tela */
+  background-size: cover; /* A imagem será totalmente visível, mas pode haver bordas */
+
+  background-position: center; /* Posiciona a imagem no centro */
+  background-repeat: no-repeat;
+  
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+}
+
+
+
+/* Demais estilos continuam os mesmos */
+main {
+  max-width: 300px;
+  margin-inline: auto;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#photo {
+  width: 105px; /* Tamanho padrão da imagem */
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  padding: 3.7px;
+  transition: 400ms;
+  margin-top: 170px; /* Baixa a imagem */
+}
+
+#photo:hover {
+  width: 140px; /* Tamanho da imagem ao passar o mouse */
+}
+
+h1 {
+  font-family: 'Itars', 'Love', sans-serif;
+  font-size: 30px;
+  line-height: 1.4;
+  color: transparent; /* Torna o texto transparente */
+  background: linear-gradient(45deg, #05f283, #666666); /* Gradiente de cores */
+  -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+  background-clip: text; /* Para suportar navegadores mais novos */
+  font-style: normal;
+}
+
+header p {
+  font-family: 'Itars', 'Love', sans-serif;
+  font-size: 16px;
+  opacity: 1; /* Aumenta a opacidade para 1 (totalmente visível) */
+  color: #05f283; /* Cor mais escura para contraste */
+  color: transparent; /* Torna o texto transparente */
+  background: linear-gradient(45deg, #05f283, #666666); /* Gradiente de cores */
+  -webkit-background-clip: text; /* Aplica o gradiente ao texto */
+  background-clip: text; /* Para suportar navegadores mais novos */
+}
+
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 50px;
+  padding: 1px;
+  background: linear-gradient(45deg, #05f2835f, #06b7f78e); /* Gradiente de fundo */
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff; /* Cor do texto em branco */
+  font-size: 16px; /* Aumentei um pouco o tamanho da fonte */
+  border-radius: 25px; /* Bordas arredondadas para um visual mais suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+  transition: all 0.3s ease-in-out; /* Transição suave para todos os efeitos */
+}
+
+ul li a:hover {
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-hover);
+  cursor: pointer;
+}
+
+/* === THEME BUTTONS === */
+.themes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.themes #light-sun {
+  display: none;
+}
+
+.themes #dark-moon {
+  transition: 400ms;
+}
+
+.themes #dark-moon:hover {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+body.dark-theme #dark-moon {
+  display: none;
+}
+
+body.dark-theme .themes #light-sun {
+  display: initial;
+  transition: 400ms;
+}
+
+body.dark-theme .themes #light-sun:hover {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* ====== ====== */
+footer {
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.6;
+  transition: opacity 400ms;
+  color: var(--text-color);
+  margin-top: 77px; /* Baixa a imagem */
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  body {
+    background-image: url(/assets/04.jpg
+    ); /* Imagem específica para dispositivos móveis */
+    background-size: cover; /* Garante que a imagem de fundo cubra a tela */
+  }
+  
+  #photo {
+    width: 80px; /* Reduz o tamanho da imagem em telas menores */
+    margin-top: 20vh; /* Ajusta a margem superior para melhor espaçamento */
+  }
+
+  h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  ul li a {
+    height: 45px; /* Reduz a altura dos botões */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte dos botões */
+  }
+
+  footer {
+    margin-top: 20px; /* Espaçamento maior para telas menores */
+    font-size: 14px; /* Aumenta o tamanho da fonte em telas menores para melhor legibilidade */
+  }
+}
+
+@media (max-width: 480px) {
+  #photo {
+    width: 70px; /* Tamanho ainda menor em dispositivos móveis */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Tamanho da fonte do título para celulares */
+  }
+
+  ul li a {
+    height: 40px; /* Altura ainda menor para botões */
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte dos botões */
+  }
+  
+  footer {
+    margin-top: 15px; /* Espaçamento menor, mas ainda assim com um pouco de margem */
+    font-size: 12px; /* Tamanho da fonte padrão para celulares */
+  }
+}
